@@ -26,16 +26,35 @@ ninja('axe');
 
 // let counter = () => {}
 
-let counter = ( () => {
-  let counter = 0;
+let counter = () => {
+  let count = 0;
   return function() {
-    counter ++; return counter
-  }})();
+    return count ++;
+  }
+}
 
-console.log(counter());
-console.log(counter());
-console.log(counter());
-console.log(counter());
+const newCounter = counter();
+
+console.log(newCounter());
+console.log(newCounter());
+console.log(newCounter());
+console.log(newCounter());
+console.log(newCounter());
+console.log(newCounter());
+
+// Copied from W3 schools
+// let counter = ( () => {
+//   let counter = 0;
+//   return function() {
+//     counter ++; return counter
+//   }})();
+
+// console.log(counter());
+// console.log(counter());
+// console.log(counter());
+// console.log(counter());
+
+
 
 
 // Example usage: const newCounter = counter();
